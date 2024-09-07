@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    <title>Resume Builder</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkgray;
+            color: black;
+            line-height: 1.6;
+        }
+
+        header {
+            background:light darkslategrey;
+            color:black;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            background:peachpuff;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px red;
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid lightblue;
+            padding-bottom: 0.5rem;
+            color:darkred ;
+        }
+
+        #profilePic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            border: 3px solid darkslategrey;
+        }
+
+        a {
+            color:lightcoral;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resume Builder</h1>
+    </header>
+    <main>
+        <!-- Form Section -->
+        <section id="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="resumeForm">
+                <div class="form-group">
+                    <label for="arish">Name:</label>
+                    <input type="text" id="name" name="name required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Contact No:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education:</label>
+                    <textarea id="education" name="education" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills (comma separated):</label>
+                    <input type="text" id="skills" name="skills" required>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Work Experience:</label>
+                    <textarea id="experience" name="experience" rows="4" required></textarea>
+                </div>
+                <button type="submit">Update Resume</button>
+            </form>
+        </section>
+
+        <!-- Resume Display Section -->
+        <section id="profile">
+            <h2>Profile</h2>
+            <img src="WhatsApp Image 2024-07-28 at 20.13.22_0a98d396.jpg" alt="Profile Picture" id="profilePic">
+            <strong>Name:</strong><h3 id="displayName">arish</h3>
+            
+            <p>Email: <a id="displayEmail" href="#">arish.ent30@gmail.com</a></p>
+            <p>Contact No: <a id="displayPhone" href="#">03035486662</a></p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p id="displayEducation"><ul>
+
+            
+                <li><strong> i was complete my intermediate education </strong></li> <strong>i was doing IT languages such as :</strong></li>
+                <li>html</li>
+                <li>TypeScript</li>
+                <li>CSS</li>
+                <li>nextjs,etc</li>
+                
+            </ul></p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p id="displaySkills">
+                <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript & TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Git & GitHub</li>
+                <li>grafic design</li>
+               
+            </ul></p>
+        </section>
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <p id="displayExperience"><ul></ul>
+                <li>
+                    <strong>Software Developer</strong>
+                    <strong>wedsite Developer</strong>
+                    <strong>graphic design</strong>
+                    <ul>
+                        <li>Developed and maintained web applications using React and Node.js.</li>
+                        <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Intern</strong> - Startup Inc. (Present)
+                    <ul>
+                        <li>Assisted in developing front-end features and improving user interface.</li>
+                        <li>Participated in code reviews and team meetings.</li>
+                    </ul>
+                </li>
+            </ul></p>
+            <section>
+                <button id="actionButton">Click Me!</button>
+                <p id="result"></p>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      
+                        button.addEventListener("click", () => {
+                            result.textContent = "Button clicked! TypeScript is working.";
+                        });
+                    });
+                </script>
+                </section>
+                
+            </main>
+<section>
+    <script src="app.js"></script> <!-- Include the compiled JavaScript -->
+</section>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("resumeForm");
+            const displayName = document.getElementById("displayName");
+            const displayEmail = document.getElementById("displayEmail");
+            const displayPhone = document.getElementById("displayPhone");
+            const displayEducation = document.getElementById("displayEducation");
+            const displaySkills = document.getElementById("displaySkills");
+            const displayExperience = document.getElementById("displayExperience");
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+               
+
+                displayName.textContent = name;
+                displayEmail.href = `mailto:${email}`;
+                displayEmail.textContent = email;
+                displayPhone.href = `tel:${phone}`;
+                displayPhone.textContent = phone;
+                displayEducation.textContent = education;
+                displaySkills.textContent = skills.split(',').map(skill => skill.trim()).join(', ');
+                displayExperience.textContent = experience;
+            });
+        });
+    </script>
+</body>
+</html>
